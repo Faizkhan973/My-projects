@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int L_Search(int Books[], int target, int n)
+{
+   for(int i=0; i < n ; i++)
+      {
+      if(Books[i] == target)
+         {
+         return  i;
+         }
+      }
+
+}
+int main()
+
+cout << "Searching a Book in Shelf by linear Seaching Algo" << endl;
+
+{ string Books[7] ={"maths", "English", "urdu", "Islamyat","PS","DSA","Leniar Aljabra"}
+  target= "maths";
+  int n = 7 ;
+ int  index = L_Search(Books, target, n);
+ if (index == -1)
+    {
+    cout << "No such Book Found" << endl;
+    }
+    else
+    {
+    cout << "Book found at position :"<<index << endl;
+    }
+  
+    
+    return 0;
+}
