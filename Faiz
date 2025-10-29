@@ -1,0 +1,9 @@
+remote:
+To https://github.com/Faizkhan973/My-projects.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+~/My-projects $ git config --global credential.helper store
+~/My-projects $ git push -u origin master
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/Faizkhan973/My-projects.git/'
+~/My-projects $
