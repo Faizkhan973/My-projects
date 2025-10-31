@@ -1,0 +1,33 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+vector<int>PairSum(vector<int> array, int target )
+{
+    int n=  array.size();
+    vector<int> answer;
+    for(int i=0; i < n ; i++)
+    {
+        for(int j=i+1; j < n ; j++)
+        {
+        if(array[i] + array[j] == target)
+          {
+          answer.push_back(i);
+          answer.push_back(j);
+          return answer ;
+          }
+        }
+    }
+    return answer;
+
+
+}
+int main()
+{
+    cout << "program about pair Sum... " << endl;
+    cout << "Brute Force aproach......" << endl;
+    vector<int> array = {1, 2, 3, 4,5, 9};
+    int target = 14;
+    vector<int> answer =   PairSum(array,target );
+    cout << answer[0] <<"  " <<answer[1]<< endl;
+    return 0;
+}
