@@ -9,17 +9,15 @@ vector<int>PairSum(vector<int> array, int target )
     {
         for(int j=i+1; j < n ; j++)
         {
-        if(array[i] + array[j] == target)
-          {
-          answer.push_back(i);
-          answer.push_back(j);
-          return answer ;
-          }
+           if(array[i] + array[j] == target)
+             {
+              answer.push_back(i);
+              answer.push_back(j);
+              return answer ;
+             }
         }
     }
     return answer;
-
-
 }
 int main()
 {
@@ -28,6 +26,6 @@ int main()
     vector<int> array = {1, 2, 3, 4,5, 9};
     int target = 14;
     vector<int> answer =   PairSum(array,target );
-    cout << answer[0] <<"  " <<answer[1]<< endl;
+    cout<<"index of pair Sum" << answer[0] <<  "  " <<answer[1]<< endl;
     return 0;
 }
