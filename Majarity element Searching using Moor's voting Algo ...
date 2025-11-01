@@ -1,0 +1,67 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+// Function to find the majority element in an array
+// A "majority element" is the element that appears more than n/2 times
+int MajorityElement(vector<int> array)
+{
+    int frequency = 0;  // Keeps track of current candidate's frequency
+    int candidate = 0;  // Potential majority element
+
+    // Step 1: Finding candidate for majority element using Moore's Voting Algorithm
+    for (int i = 0; i < array.size(); i++)
+    {
+        if (frequency == 0)
+        {
+            // If frequency is 0, set current element as new candidate
+            candidate = array[i];
+            frequency = 1;
+        }
+        else if (array[i] == candidate)
+        {
+            // If current element matches the candidate, increment frequency
+            frequency++;
+        }
+        else
+        {
+            // Otherwise, decrement frequency (cancel out opposite elements)
+            frequency--;
+        }
+    }
+
+    // Step 2: Verify if candidate is truly a majority element
+    int count = 0;
+    for (int i = 0; i < array.size(); i++)
+    {
+        if (array[i] == candidate)
+        {
+            count++;
+        }
+    }
+
+    // Step 3: Return candidate only if it appears more than n/2 times
+    if (count > array.size() / 2)
+        return candidate;
+    else
+        return -1; // No majority element found
+}
+
+int main()
+{
+    cout << "Optimized approach of finding Majority element in an array..." << endl;
+
+    // Example input array
+    vector<int> array = {1, 3, 3, 3, 3, 3, 8, 4, 5};
+
+    // Calling the function to find majority element
+    int majority = MajorityElement(array);
+
+    // Display result
+    if (majority != -1)
+        cout << "Majority Element: " << majority << endl;
+    else
+        cout << "No majority element found." << endl;
+
+    return 0;
+}
