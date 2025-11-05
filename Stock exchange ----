@@ -1,0 +1,22 @@
+
+/*Stock Commission
+Kathryn bought 600 shares of stock at a price of $21.77 per share. She must pay her stock broker a 2 percent commission for the transaction. Write a program that calcu-lates and displays the following:
+The amount paid for the stock alone (without the commission)
+The amount of the commission
+The total amount paid (for the stock plus the commission) */
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout << "Stock exchange ......" << endl;
+    double total_shares = 600;
+    double prise_of_each_Share= 21.77;
+    double brocker_commision= 0.02;
+    double Total_commision_amount =  (total_shares*prise_of_each_Share)*brocker_commision ;
+    cout << "Total amount paid for stock :"<< total_shares*prise_of_each_Share<<"$"<<endl;
+    cout << "Total Commision amount :" <<Total_commision_amount<< endl;
+    cout << "Total amount with Commision :"<<(total_shares*prise_of_each_Share) +Total_commision_amount<<"$"<<endl;
+
+    return 0;
+}
