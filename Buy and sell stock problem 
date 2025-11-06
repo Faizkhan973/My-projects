@@ -1,0 +1,23 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int propet(vector<int> array )
+{
+    int Size=  array.size();
+    int Bestbuy = array[0];
+    int Max_propet = 0;
+    for(int i= 1 ; i < Size; i++)
+    {
+      int Current_propet = array[i]- Bestbuy;
+      Max_propet = max(Max_propet,Current_propet );
+      Bestbuy = min(Bestbuy, array[i]);
+    }
+    return Max_propet;
+}
+int main()
+{
+ vector<int> array = {1,2,3,4,5};
+ 
+    cout << propet(array) << endl;
+    return 0;
+}
