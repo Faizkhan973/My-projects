@@ -3,17 +3,41 @@ using namespace std;
 int main()
 {
     cout << "This programe will display labour wages...." << endl;
+
+
     int Total_Regular_hrs = 40;
+
+
     cout << "Total_Regular_hrs      :"<< Total_Regular_hrs<< endl;
+
+
     int Over_time_hrs = 50- Total_Regular_hrs;
+
+
     cout << "Over_time_hrs          :" <<Over_time_hrs<< endl;
+
+
     double Total_Regular_hrs_rate = 18.25;
+
+
     double Over_time_hrs_rate = 27.78;
+
+
     cout << "Total_Regular_hrs_rate :"<< Total_Regular_hrs_rate<<"$"<< endl;
+
+
     cout << "Over_time_hrs_rate     :" <<Over_time_hrs_rate<<""<< endl;
+
+
     double Total_Regular_hrs_wages = Total_Regular_hrs*Total_Regular_hrs_rate;
+
+
     double Over_time_hrs_wages     =   Over_time_hrs*Over_time_hrs_rate;
+
+
     double total_wages = Total_Regular_hrs_wages +Over_time_hrs_wages;
+
     cout << "Total wages of labor in week is :"<< total_wages<<"$"<< endl;
+
     return 0;
 }
