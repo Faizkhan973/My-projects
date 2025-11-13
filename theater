@@ -1,0 +1,25 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+int A, B, C ;
+double Total ;
+    cout << "inter class A, B, C  Seat price in Sunima \n" ;
+    cout << "class A Seat price 15$  :";
+    cin >> A;
+    cout << "class B Seat price  12$ :" ;
+    cin >> B;
+    cout << "class C Seat price   9$ :";
+    cin>> C;
+    A *= 15;
+    B *= 12;
+    C *= 9 ;
+    Total = A + B + C ;
+    cout<< setprecision(2)<<showpoint<< fixed<< endl;
+    cout << Total<<"$" << endl;
+    
+     
+    return 0;
+}
