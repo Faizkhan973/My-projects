@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    // mA consumption per hour
+    const double GPS = 148;
+    const double WIFI = 352;
+    const double DISPLAY = 197;
+
+    double gpsTime, wifiDisplayTime;
+
+    cout << "Hours using GPS: ";
+    cin >> gpsTime;
+    cout << "Hours using WiFi + Display full brightness: ";
+    cin >> wifiDisplayTime;
+
+    double totalConsumption =
+        gpsTime * GPS + wifiDisplayTime * (WIFI + DISPLAY);
+
+    cout << fixed << setprecision(2);
+    cout << "Total battery consumed = "
+         << totalConsumption << " mAh" << endl;
+
+    return 0;
+}
