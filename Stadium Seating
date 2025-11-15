@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int A, B, C;
+    const double PRICE_A = 15.00;
+    const double PRICE_B = 12.00;
+    const double PRICE_C = 9.00;
+
+    cout << "Class A tickets sold: ";
+    cin >> A;
+    cout << "Class B tickets sold: ";
+    cin >> B;
+    cout << "Class C tickets sold: ";
+    cin >> C;
+
+    double income = A * PRICE_A + B * PRICE_B + C * PRICE_C;
+
+    cout << fixed << setprecision(2);
+    cout << "Total income from ticket sales: $" << income << endl;
+
+    return 0;
+}
