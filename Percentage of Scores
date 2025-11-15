@@ -1,0 +1,18 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double s1, s2, s3, s4, s5, s6;
+    cout << "Enter six subject scores (out of 100 each): ";
+    cin >> s1 >> s2 >> s3 >> s4 >> s5 >> s6;
+
+    double total = s1 + s2 + s3 + s4 + s5 + s6;
+    double percentage = (total / 600.0) * 100;
+
+    cout << fixed << setprecision(2);
+    cout << "Total score = " << total << endl;
+    cout << "Percentage = " << percentage << "%" << endl;
+
+    return 0;
+}
