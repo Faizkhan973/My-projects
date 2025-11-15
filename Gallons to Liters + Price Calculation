@@ -1,0 +1,24 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double liters;
+    const double PRICE_PER_GALLON = 3.58;
+    const double LITERS_PER_GALLON = 4.546;
+
+    cout << "Enter gasoline volume in liters: ";
+    cin >> liters;
+
+    // Convert to gallons
+    double gallons = liters / LITERS_PER_GALLON;
+
+    // Calculate price
+    double price = gallons * PRICE_PER_GALLON;
+
+    cout << fixed << setprecision(2);
+    cout << "Equivalent in gallons: " << gallons << endl;
+    cout << "Price of gasoline: $" << price << endl;
+
+    return 0;
+}
