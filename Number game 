@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    int low, high, guess;
+
+    cout << "Enter lower bound: ";
+    cin >> low;
+    cout << "Enter upper bound: ";
+    cin >> high;
+
+    srand(time(0));
+    int randomNumber = rand() % (high - low + 1) + low;
+
+    cout << "A number between " << low << " and " << high << " has been selected.\n";
+    cout << "Enter your guess: ";
+    cin >> guess;
+
+    int diff = abs(guess - randomNumber);
+
+    cout << "Correct number: " << randomNumber << endl;
+    cout << "Difference: " << diff << endl;
+
+    return 0;
+}
