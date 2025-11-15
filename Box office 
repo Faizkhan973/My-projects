@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() {
+    string movie;
+    int adult, child;
+
+    const double PRICE_ADULT = 10.0;
+    const double PRICE_CHILD = 6.0;
+
+    cout << "Enter movie name: ";
+    getline(cin, movie);
+
+    cout << "Adult tickets sold: ";
+    cin >> adult;
+    cout << "Child tickets sold: ";
+    cin >> child;
+
+    double gross = adult * PRICE_ADULT + child * PRICE_CHILD;
+    double net = gross * 0.20;
+    double distributor = gross - net;
+
+    cout << fixed << setprecision(2);
+    cout << "Movie Name: \"" << movie << "\"" << endl;
+    cout << "Adult Tickets Sold: " << adult << endl;
+    cout << "Child Tickets Sold: " << child << endl;
+    cout << "Gross Box Office Profit: $" << gross << endl;
+    cout << "Net Box Office Profit: $" << net << endl;
+    cout << "Amount Paid to Distributor: $" << distributor << endl;
+
+    return 0;
+}
