@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Health Club Membership..." << endl;
+    double child= 40, adult= 60, Senior= 100;
+    int choice ;
+    cout << "For child press      : 1" << endl;
+    cout << "For Adult press      : 2" << endl;
+    cout << "For Senior press     : 3" << endl;
+    cout << "Quite programe press : 4" << endl;
+    cout << "Enter your choice    :  ";
+    cin >> choice;
+
+    switch(choice)
+    {
+    case 1 :
+    {
+        int months;
+        cout << "For How many months  :";
+        cin >> months;
+        int Total_price = months*child;
+        cout << "You will pay  for child : "<<Total_price<<" $";
+        break;
+    }
+    case 2 :
+    {
+        int months;
+        cout << "For How many months  :";
+        cin >> months;
+        int Total_price = months*child;
+        cout << "You will pay  for child : "<<Total_price<<" $";
+        break;
+    }
+    case 3 :
+    {
+        int months;
+        cout << "For How many months  :";
+        cin >> months;
+        int Total_price = months*child;
+        cout << "You will pay  for child : "<<Total_price<<" $";
+        break;
+    }
+    case 4 :
+    {
+        cout << "your program is end ----" << endl;
+        cout << "Thanks " << endl;
+        break;
+    }
+    default:
+    {
+        cout << "Enter choice with in range :\n" ;
+        cout << "For child press      : 1" << endl;
+        cout << "For Adult press      : 2" << endl;
+        cout << "For Senior press     : 3" << endl;
+        cout << "Quite programe press : 4" << endl;
+    }
+    }
+    return 0;
+}
