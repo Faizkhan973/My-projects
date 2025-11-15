@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    cout << "Comparison of two string ..." << endl;
+    char array_1[10], array_2[10];
+    cout << "Inter string 1 :";
+    cin.getline(array_1, 10);
+    cout << "Inter string 2 :";
+    cin.getline(array_2, 10);
+
+    if(strcmp(array_1, array_2) == 0)
+        cout << "string are same ..." << endl;
+    else
+        cout << "string are not Same ..." << endl;
+    return 0;
+}
