@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    string m1, m2, m3;
+    double r1, r2, r3;
+
+    cout << "Enter name of first month: ";
+    cin >> m1;
+    cout << "Rainfall in " << m1 << ": ";
+    cin >> r1;
+
+    cout << "Enter name of second month: ";
+    cin >> m2;
+    cout << "Rainfall in " << m2 << ": ";
+    cin >> r2;
+
+    cout << "Enter name of third month: ";
+    cin >> m3;
+    cout << "Rainfall in " << m3 << ": ";
+    cin >> r3;
+
+    double avg = (r1 + r2 + r3) / 3;
+
+    cout << fixed << setprecision(2);
+    cout << "The average rainfall for " << m1 << ", "
+         << m2 << ", and " << m3 << " is "
+         << avg << " inches." << endl;
+
+    return 0;
+}
