@@ -1,0 +1,46 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+    cout << "file handling and opration  .." << endl;
+    cout << "Entering and Receiving data to and from a file" << endl;
+    cout << "" << endl;
+    int array[10];
+    
+    
+    // To write data in to file ...
+    for(int i=1; i <= 10 ; i++)
+    {
+    int num;
+    cout << "Inter value "<<i<<" :" ;
+    cin >> num;
+    array[i] = num ;
+    }
+     // transfer data into a file ...
+    ofstream file;
+    file.open("Success.txt");
+    for(int i=1 ; i <=10 ; i++)
+    {
+       file<<array[i]<< endl;
+    }
+    file.close();
+    
+    // To Retrive  data from File to array ...
+    ifstream file;
+    file.open("Success.txt");
+    for(int i=1 ; i <=10 ; i++)
+    {
+       file >> array[i];
+    }
+    file.close();
+    
+    // To print File element 
+    for(int i=1 ; i <=10 ; i++)
+    {
+       cout<< array[i]<<" ";
+    }
+    
+    return 0;
+}
