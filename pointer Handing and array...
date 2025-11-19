@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+void   Sum(int *, int);
+void get_values(int *, int);
+int main()
+{
+    cout << "array and its Sum" << endl;
+    const int Size = 5;
+    int array[Size];
+    get_values(array, Size );
+    Sum(array, Size);
+    return 0;
+}
+
+void get_values(int *array, int  Size )
+{
+    for(int i=0 ; i < Size; i++)
+    {
+        cout << "inter " << i + 1 <<" Number :";
+        cin >> *(array+i);
+    }
+}
+
+void   Sum(int *array, int Size)
+{
+    int total =0 ;
+    for(int i=0 ; i < Size; i++)
+    {
+        // cout << "inter " << i + 1 <<" Number :";
+        total += *(array);
+        array++;
+    }
+    cout << "Total :"<< total << endl;
+
+}
